@@ -23,6 +23,8 @@ public class TodoService {
     }
 
     public List<Todo> update(Todo todo){
+
+        System.out.println(todo.getId());
         todoRepository.save(todo);
 
         return list();
@@ -38,6 +40,5 @@ public class TodoService {
 
         return todoRepository.findAll(sort);
     }
-
 
 }
